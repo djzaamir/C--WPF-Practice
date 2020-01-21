@@ -24,5 +24,13 @@ namespace WPF_Practice
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string full_name = fullName_textbox.Text;
+            string email = email_textbox.Text;
+            MessageBox.Show($"Welcome {full_name} with email address\n{email}", "Mubarik Ho, Mubarik Ho", MessageBoxButton.OK, MessageBoxImage.Information);
+
+        }
     }
 }

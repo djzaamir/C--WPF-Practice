@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Practice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        FontSize="20"
+        Title="Practice WPF" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <!--Put 20 pixels margin at the start and the end-->
+            <ColumnDefinition Width="20"/>
+            <!--Auto Expand or shrink depending on the child component-->
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <!--* will take the rest of the remaining space-->
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <!--Welcome Text-->
+        <TextBlock Text="Andromeda Login" Grid.Row="1" Grid.Column="1" FontSize="40" Grid.ColumnSpan="3" Margin="210 0 0 30"/>
+
+        <!--Full Name Text and TextBox-->
+        <TextBlock Text="Full Name" Grid.Row="2" Grid.Column="1" Margin="0 0 0 10"/>
+        <TextBox x:Name="fullName_textbox" Grid.Row="2" Grid.Column="2" MinWidth="150" Margin="20 0 0 10"/>
+
+        <!--Email Text and TextBox-->
+         <TextBlock Text="Email" Grid.Row="3" Grid.Column="1"  />
+        <TextBox x:Name="email_textbox" Grid.Row="3" Grid.Column="2" MinWidth="150" Margin="20 0 0 10"/>
+
+        <!--Submit Button-->
+        <Button Content="Submit" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Click="Button_Click"/>
+
     </Grid>
 </Window>
