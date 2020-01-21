@@ -23,19 +23,31 @@ namespace WPF_Practice
         public MainWindow()
         {
             InitializeComponent();
+            List<EducationTitles> education_titles = new List<EducationTitles>();
+
+            education_titles.Add(new EducationTitles("Computer Science"));
+            education_titles.Add(new EducationTitles("English"));
+            education_titles.Add(new EducationTitles("Ecnomics"));
+
+            education_title_comboBox.ItemsSource = education_titles;
+            education_title_comboBox.SelectedIndex = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+           
+
             string full_name = fullName_textbox.Text;
             string email = email_textbox.Text;
+            string education_title  =  ((EducationTitles)education_title_comboBox.SelectedItem).title;
+
             if (full_name.Length == 0 || email.Length == 0)
             {
                 MessageBox.Show($"No Name or Email Provided", "kia Yaar ?", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show($"Welcome {full_name} with email address\n{email}", "Mubarik Ho, Mubarik Ho", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"Welcome {full_name}\nEmail : \n{email}\nBacelors : {education_title}", "Mubarik Ho, Mubarik Ho", MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
         }
