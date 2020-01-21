@@ -32,14 +32,14 @@
 
         <!--Full Name Text and TextBox-->
         <TextBlock Text="Full Name" Grid.Row="2" Grid.Column="1" Margin="0 0 0 10"/>
-        <TextBox x:Name="fullName_textbox" Grid.Row="2" Grid.Column="3" MinWidth="150" Margin="20 0 0 10"/>
+        <TextBox x:Name="fullName_textbox" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" MinWidth="150" Margin="20 0 0 10"/>
 
         <!--Email Text and TextBox-->
          <TextBlock Text="Email" Grid.Row="3" Grid.Column="1"  />
-        <TextBox x:Name="email_textbox" Grid.Row="3" Grid.Column="3" MinWidth="150" Margin="20 0 0 10"/>
+        <TextBox x:Name="email_textbox" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" MinWidth="150" Margin="20 0 0 10"/>
 
         <!--Submit Button-->
-        <Button Content="Submit" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"  Click="Button_Click"/>
+        <Button Content="Submit" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="10" Width="200"  Click="Button_Click"/>
 
     </Grid>
 </Window>
